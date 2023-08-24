@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Limites</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calc">
+        <span id="title">Calculadora De Limites</span>
+        <input id="funcion" type="str" placeholder="Ingrese su funcion aqui">
+        <input  id="variable_ind" type="str" placeholder="ingrese a que valor tiende x">
+        <button onclick="calcular()">Calcular...</button>
+        <span id="result">El resultado aparecera aqui</span>
+    </div>
+    <script src="../eel.js"></script>
+    <script> 
+    result_text=document.getElementById("result");
+    funcion=document.getElementById("funcion");
+    variable_ind=document.getElementById("variable_ind");
+    
+    function calcular(){
+        eel.main(funcion.value, variable_ind.value)(result);
+    }
+    function result(result){
+        result_text.innerHTML=result;
+
+    }
+
+    </script>
+    
+</body>
+</html>
